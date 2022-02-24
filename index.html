@@ -12,8 +12,6 @@
     
     <main>
         <section id="app" class="container">
-
-
             <div  class="slider-wrapper">
                 <div v-for="(item, i) in items" class="slider-item" :class="(activeIndex === i)? 'active': ' ' ">
                     <div class="slider-img"><img :src="item.immagine" :alt="item.titolo"></div>
@@ -22,36 +20,14 @@
                         <p>{{item.descrizione}}</p>
                     </div>
                 </div>
-
-                
-
-
-                <!-- <div class="slider-item active">
-                <div class="slider-img"><img src="img/01.jpg" alt=""></div>
-
-                <div class="text">
-                    <h2>lorem</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aliquam error iure non odio fuga accusamus itaque saepe optio reiciendis.</p>
-                </div> -->
             </div>
-    
             <div class="controller-wrapper">
-                
-
-                <div v-for="(item, i) in items" class="controller-item" :class="(activeIndex === i)? 'active': ' ' ">
-                    <img :src="item.immagine" :alt="item.titolo">
+                <div v-for="(item, i) in items" class="controller-item" :class="(activeIndex === i)? 'active': ' ' " >
+                    <img @click="click()" :src="item.immagine" :alt="item.titolo">
                 </div>
-                
-                
-                <!-- <div class="controller-item active">
-                    <img src="img/01.jpg" alt="">
-                </div>
-                </div>-->
-    
                 <div @click="nextSlide()" class="btn up">&darr;</div>
                 <div @click="prevSlide()" class="btn down">&uarr;</div> 
             </div>
-          
         </section>
     </main>
 
