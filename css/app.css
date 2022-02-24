@@ -4,13 +4,18 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #131313;
-    font-family: 'Open Sans', sans-serif;
+
 }
 
 .container{
@@ -25,6 +30,7 @@ main{
 
 .slider-wrapper .slider-item{
     display: none;
+
 }
 
 .slider-item.active {
@@ -50,11 +56,13 @@ main{
     color: white;
     text-align: right;
     width: 80%;
+
 }
 
+/* 
 .slider-wrapper .text h2 {
     margin-bottom: 20px;
-}
+} */
 
 .controller-wrapper {
     display: flex;
@@ -80,6 +88,8 @@ main{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center;
+    aspect-ratio: 16/9;
 }
 
 .controller-wrapper .btn {
