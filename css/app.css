@@ -9,10 +9,13 @@ main{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #131313;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container{
     display: flex;
+    
 }
 
 
@@ -57,6 +60,7 @@ main{
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: 13;
 }
 
 .controller-wrapper .controller-item {
@@ -66,6 +70,10 @@ main{
 
 .controller-wrapper .controller-item.active {
     opacity: 1;
+    -webkit-box-shadow: 0px 0px 14px 1px #FFF8BF;
+    -moz-box-shadow: 0px 0px 14px 1px #FFF8BF;
+    -o-box-shadow: 0px 0px 14px 1px #FFF8BF;
+    box-shadow: 0px 0px 14px 1px #FFF8BF;
 }
 
 .controller-wrapper .controller-item img {
