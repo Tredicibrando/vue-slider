@@ -71,32 +71,35 @@ const app = new Vue ({
     },
 
     methods: {
-       nextSlide : function() {
-           if(activeIndex === 0 ){
-            this.activeIndex = 5,
-             } else{
-                this.activeIndex++,
-                }
-       },
-    
-
-    {
-        prevSlide : function() {
-            if(activeIndex === 5 ){
-                this.activeIndex = 0,
-                } else {
-                    this.activeIndex--,
-                } 
+       nextSlide () {
+        (this.activeIndex < this.items.length-1 ) ? this.activeIndex++ : this.activeIndex = 0,
+        console.log(this.activeIndex)
+        },
+        
+        prevSlide () {
+        (this.activeIndex > 0 ) ? this.activeIndex-- : this.activeIndex = this.items.length -1
         }
-    },
+    }
 
-      
-   
-
+    
 });
 
 
 
+// if ( activeCounter < items.length - 1 ) {
+//     //             ++activeCounter;
+//     //             console.log(activeCounter);    
+//     //         } else {
+//     //             activeCounter = 0;
+//     //         }
+
+
+// if ( activeCounter > 0 ) {
+//     //             --activeCounter;
+//     //             console.log(activeCounter);    
+//     //         } else {
+//     //             activeCounter = items.length - 1;
+//     //         }
 
 
 
