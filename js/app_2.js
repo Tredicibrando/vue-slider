@@ -35,7 +35,8 @@ const items = [
 const app = new Vue ({
     el: '#app',
     data: {
-        items : [
+        activeIndex : 0,
+        items: [
             {
                 immagine: 'img/01.jpg',
                 titolo: 'Svezia',
@@ -67,7 +68,30 @@ const app = new Vue ({
             },
         ],
 
-    }
+    },
+
+    methods: {
+       nextSlide : function() {
+           if(activeIndex === 0 ){
+            this.activeIndex = 5,
+             } else{
+                this.activeIndex++,
+                }
+       },
+    
+
+    {
+        prevSlide : function() {
+            if(activeIndex === 5 ){
+                this.activeIndex = 0,
+                } else {
+                    this.activeIndex--,
+                } 
+        }
+    },
+
+      
+   
 
 });
 
