@@ -49,6 +49,11 @@ const app = new Vue ({
         (this.activeIndex > 0 ) ? this.activeIndex-- : this.activeIndex = this.items.length -1
         },
         
+        goToSlide (index){
+            this.activeIndex = index;
+        }
+
+        
     
 
     }

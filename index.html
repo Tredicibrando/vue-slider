@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="controller-wrapper">
-                <div v-for="(item, i) in items" class="controller-item" :class="(activeIndex === i)? 'active': ' ' " >
+                <div v-for="(item, i) in items" class="controller-item" :class="(activeIndex === i)? 'active': ' ' " @click="goToSlide(i)" >
                     <img @click="click()" :src="item.immagine" :alt="item.titolo">
                 </div>
                 <div @click="nextSlide()" class="btn up"><i class="fa-solid fa-chevron-down"></i></div>

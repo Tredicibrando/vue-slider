@@ -74,14 +74,15 @@ main{
 .controller-wrapper .controller-item {
     height: calc(550px / 5);
     opacity: .5;
+    cursor: pointer;
 }
 
 .controller-wrapper .controller-item.active {
     opacity: 1;
-    -webkit-box-shadow: 0px 0px 14px 1px #FFF8BF;
-    -moz-box-shadow: 0px 0px 14px 1px #FFF8BF;
-    -o-box-shadow: 0px 0px 14px 1px #FFF8BF;
-    box-shadow: 0px 0px 14px 1px #FFF8BF;
+    -webkit-box-shadow: 0px 0px 14px 1px rgba(255, 230, 146, 0.5);
+    -moz-box-shadow: 0px 0px 14px 1px rgba(255, 230, 146, 0.5);
+    -o-box-shadow: 0px 0px 14px 1px rgba(255, 230, 146, 0.5);
+    box-shadow: 0px 0px 14px 1px rgba(255, 230, 146, 0.5);
 }
 
 .controller-wrapper .controller-item img {
@@ -90,6 +91,7 @@ main{
     object-fit: cover;
     object-position: center;
     aspect-ratio: 16/9;
+    
 }
 
 .controller-wrapper .btn {
